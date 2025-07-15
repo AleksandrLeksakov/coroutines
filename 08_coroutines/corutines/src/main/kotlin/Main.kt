@@ -30,6 +30,7 @@ enum class AttachmentType {
     IMAGE, VIDEO, AUDIO
 }
 
+@OptIn(ExperimentalSerializationApi::class)
 val json = Json {
     ignoreUnknownKeys = true
     explicitNulls = false
@@ -76,4 +77,4 @@ fun main() = runBlocking {
         println("Ошибка: ${e.message}")
         e.printStackTrace()
     }
-}//
+}
